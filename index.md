@@ -85,6 +85,7 @@
 The work focuses on retrieving and analyzing structured data related to the cultural heritage of Rimini, identifying missing or incomplete semantic properties (such as architectural style, building material, official websites, and inscriptions) in Wikidata items and suggesting and constructing RDF triples via SPARQL CONSTRUCT queries to enrich entities.
 <br>
      We use SPARQL queries to extract, filter, and validate data:
+    <br>
 - To list all monuments located in Rimini and select a relevant subset.
     <br>
 - To analyze the completeness of key semantic properties.
