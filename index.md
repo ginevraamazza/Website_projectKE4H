@@ -1,138 +1,173 @@
+---
+layout: default
+---
+
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Benvenuti</title>
+</head>
+<body>
+  <h1>Knowledge Engeneering for Humanities - Semantic Enrichment of Rimini's Monument Entities in the Wikidata Knowledge Graph</h1>
+  <p> This project aims to semantically <strong>enrich</strong> the digital representations of Rimini’s most significant monuments within the Wikidata Knowledge Graph, using techniques and tools from computer science and knowledge engineering.
+The work focuses on retrieving and analyzing structured data related to the cultural heritage of Rimini, identifying missing or incomplete semantic properties (such as architectural style, building material, official websites, and inscriptions) in Wikidata items and suggesting and constructing RDF triples via SPARQL CONSTRUCT queries to enrich entities.
+<br>
+     We use SPARQL queries to extract, filter, and validate data:
+- To list all monuments located in Rimini and select a relevant subset.
+- To analyze the completeness of key semantic properties.
+- To cross-reference with external authoritative sources (e.g., Rimini’s municipal website and scholarly guides) for validation.  di GitHub Pages.</p>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel="stylesheet" type="text/css" media="screen" href="/formula1/assets/css/style.css?v=37649892ba09134b4581750226306f6027aa2ad2">
+  <h2>Sezioni</h2>
+  <ul>
+    <li>📂 Codice: <a href="https://github.com/ginevraamazza/project-site">Vai al repository</a></li>
+    <li>📄 Documentazione: coming soon...</li>
+    <li>🧪 Esperimenti: coming soon...</li>
+  </ul>
 
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>📑 Sections | Formula 1 Enrichment Project</title>
-<meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="📑 Sections" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="KE4H – Wikidata + LLMs" />
-<meta property="og:description" content="KE4H – Wikidata + LLMs" />
-<link rel="canonical" href="https://zhanyeslam.github.io/formula1/" />
-<meta property="og:url" content="https://zhanyeslam.github.io/formula1/" />
-<meta property="og:site_name" content="Formula 1 Enrichment Project" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="📑 Sections" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"KE4H – Wikidata + LLMs","headline":"📑 Sections","name":"Formula 1 Enrichment Project","url":"https://zhanyeslam.github.io/formula1/"}</script>
-<!-- End Jekyll SEO tag -->
-
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
+  <hr>
+  <p>Hai bisogno di aiuto con il sito? Contattami!</p>
 
 
+There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project. ciaoooo
+prova prova prova. Viva il Toad!!!!!!
+# Header 1
 
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/formula1/favicon.ico" -->
+This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
-<!-- end custom head snippets -->
+## Header 2
 
-  </head>
+> This is a blockquote following a header.
+>
+> When something is important enough, you do it even if the odds are not in your favor.
 
-  <body>
+### Header 3
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          
-            <a id="forkme_banner" href="https://github.com/zhanyeslam/formula1">View on GitHub</a>
-          
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
+```
 
-          <h1 id="project_title">Formula 1 Enrichment Project</h1>
-          <h2 id="project_tagline">KE4H – Wikidata + LLMs</h2>
+```ruby
+# Ruby code with syntax highlighting
+GitHubPages::Dependencies.gems.each do |gem, version|
+  s.add_dependency(gem, "= #{version}")
+end
+```
 
-          
-        </header>
-    </div>
+#### Header 4
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1 id="-sections">📑 Sections</h1>
-<ul>
-  <li><a href="/formula1/topic.html">Topic</a></li>
-  <li><a href="/formula1/methodology.html">Methodology</a></li>
-  <li><a href="/formula1/sparql-prompts.html">SPARQL &amp; Prompts</a></li>
-  <li><a href="/formula1/challenges.html">Challenges</a></li>
-  <li><a href="/formula1/report.html">Final Report</a></li>
-</ul>
+*   This is an unordered list following a header.
+*   This is an unordered list following a header.
+*   This is an unordered list following a header.
 
-<h1 id="-formula-1-drivers-in-wikidata-enrichment-with-llms">🏁 Formula 1 Drivers in Wikidata: Enrichment with LLMs</h1>
+With this query we identify all the monuments in Rimini, to find those that will be enriched later.
 
-<p>Welcome to our KE4H project, where we explore the world of Formula 1 drivers through the lens of the Wikidata Knowledge Graph.</p>
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
+```PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+SELECT DISTINCT *
+WHERE { 
+  ?monuments wdt:P17 wd:Q38 ;
+            wdt:P131 wd:Q13369 ;
+            wdt:P1435 wd:Q26971668 ;
+            rdfs:label ?monument_name .
+  ?monuments wdt:P131 ?moncity .
+  ?moncity rdfs:label ?city .
+  FILTER (lang(?monument_name) = "it")
+  FILTER (lang(?city) = "it")
+}
+ LIMIT 100
 
-<p>Although Wikidata is one of the most comprehensive open knowledge bases, we discovered that many facts about even the most prominent F1 drivers are missing, outdated, or incomplete. From recent championship wins to team transfers and personal background details, key pieces of structured information were often absent.</p>
 
-<p>To address these semantic gaps, we employed Large Language Models (LLMs) — including ChatGPT and Gemini — to retrieve and generate missing knowledge. We asked the models to produce RDF triples using the Wikidata ontology, and then manually verified and corrected the outputs to ensure precision and consistency.</p>
+##### Header 5
 
-<blockquote>
-  <p>This project demonstrates how <strong>SPARQL queries</strong>, <strong>AI-generated content</strong>, and <strong>human validation</strong> can work together to improve the quality of open linked data — <strong>one triple at a time.</strong></p>
-</blockquote>
+1.  This is an ordered list following a header.
+2.  This is an ordered list following a header.
+3.  This is an ordered list following a header.
 
-<hr />
+###### Header 6
 
-<h2 id="-team-members">👥 Team Members</h2>
+| head1        | head two          | three |
+|:-------------|:------------------|:------|
+| ok           | good swedish fish | nice  |
+| out of stock | good and plenty   | nice  |
+| ok           | good `oreos`      | hmm   |
+| ok           | good `zoute` drop | yumm  |
 
-<ul>
-  <li><strong>Zhan Yeslam</strong></li>
-  <li><strong>Akbar Ibragimov</strong></li>
-  <li><strong>Nozimakhon Sattorova</strong></li>
-</ul>
+### There's a horizontal rule below this.
 
-<hr />
+* * *
 
-<h2 id="️-click-on-a-driver-to-explore-their-case">🏎️ Click on a driver to explore their case:</h2>
+### Here is an unordered list:
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="hamilton.md">
-        <img src="assets/images/hamilton.jpg" width="190" /><br />
-        <strong>Lewis Hamilton</strong>
-      </a>
-    </td>
-    <td align="center">
-      <a href="leclerc.md">
-        <img src="assets/images/leclerc.jpg" width="190" /><br />
-        <strong>Charles Leclerc</strong>
-      </a>
-    </td>
-    <td align="center">
-      <a href="antonelli.md">
-        <img src="assets/images/antonelli.jpg" width="190" /><br />
-        <strong>Kimi Antonelli</strong>
-      </a>
-    </td>
-    <td align="center">
-      <a href="verstappen.md">
-        <img src="assets/images/verstappen.jpg" width="190" /><br />
-        <strong>Max Verstappen</strong>
-      </a>
-    </td>
-  </tr>
-</table>
+*   Item foo
+*   Item bar
+*   Item baz
+*   Item zip
 
-<hr />
+### And an ordered list:
 
-      </section>
-    </div>
+1.  Item one
+1.  Item two
+1.  Item three
+1.  Item four
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        
-        <p class="copyright">Formula 1 Enrichment Project maintained by <a href="https://github.com/zhanyeslam">zhanyeslam</a></p>
-        
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-  </body>
+### And a nested list:
+
+- level 1 item
+  - level 2 item
+  - level 2 item
+    - level 3 item
+    - level 3 item
+- level 1 item
+  - level 2 item
+  - level 2 item
+  - level 2 item
+- level 1 item
+  - level 2 item
+  - level 2 item
+- level 1 item
+
+### Small image
+
+![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+
+### Large image
+
+![Branching](https://guides.github.com/activities/hello-world/branching.png)
+
+
+### Definition lists can be used with HTML syntax.
+
+<dl>
+<dt>Name</dt>
+<dd>Godzilla</dd>
+<dt>Born</dt>
+<dd>1952</dd>
+<dt>Birthplace</dt>
+<dd>Japan</dd>
+<dt>Color</dt>
+<dd>Green</dd>
+</dl>
+
+```
+Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+```
+
+```
+</body>
 </html>
+The final element.
+```
