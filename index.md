@@ -1,4 +1,13 @@
 <html lang="it">
+  {% include head-custom.html %}
+<style>
+  #container, .inner {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding-left: 0 !important;
+  }
+</style>
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
