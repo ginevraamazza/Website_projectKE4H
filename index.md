@@ -86,7 +86,9 @@ The work focuses on retrieving and analyzing structured data related to the cult
 <br>
      We use SPARQL queries to extract, filter, and validate data:
 - To list all monuments located in Rimini and select a relevant subset.
+    <br>
 - To analyze the completeness of key semantic properties.
+    <br>
 - To cross-reference with external authoritative sources (e.g., Rimini’s municipal website and scholarly guides) for validation.  di GitHub Pages.</p>
 
 </body>
