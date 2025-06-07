@@ -68,7 +68,7 @@
   <main>
     <section id="home">
       <h1>Benvenuto nel progetto sui monumenti di Rimini</h1>
-      <p>Questo progetto arricchisce Wikidata con dati semantici sui monumenti riminesi.</p>
+      <p>Questo progetto arricchisce Wikidata con dati semantici sui monumenti di noi riminesi.</p>
     </section>
 
     <section id="monumenti">
